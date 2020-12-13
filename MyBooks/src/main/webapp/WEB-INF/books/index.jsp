@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Books</title>
 </head>
 <body>
 	<h1>All Books</h1>
@@ -18,6 +18,7 @@
 	            <th>Description</th>
 	            <th>Language</th>
 	            <th>Number of Pages</th>
+	            <th>Links</th>
 	        </tr>
 	    </thead>
 	    <tbody>
@@ -27,6 +28,9 @@
 	            <td><c:out value="${book.description}"/></td>
 	            <td><c:out value="${book.language}"/></td>
 	            <td><c:out value="${book.numberOfPages}"/></td>
+	            <td><a href="/books/${book.id}/edit">Edit</a> | 
+		          <a href="/books/${book.id}/delete">Delete</a>
+	            </td>
 	        </tr>
 	        </c:forEach>
 	    </tbody>
